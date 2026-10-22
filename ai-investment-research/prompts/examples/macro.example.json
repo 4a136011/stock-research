@@ -1,0 +1,58 @@
+{
+  "symbol": "9999",
+  "snapshot_id": "snap-synthetic-0001",
+  "phase": "initial",
+  "seen_roles": [],
+  "role": "macro",
+  "stance": "neutral",
+  "confidence": 0.45,
+  "confidence_rationale": "僅有政策利率一項宏觀資料，缺少匯率與資金流，信心偏低",
+  "thesis": "政策利率維持 2.0%，資金面對評價倍數屬中性環境，目前無明確順風或逆風。",
+  "arguments": [
+    {
+      "claim": "政策利率為 2.0%，在快照中未顯示緊縮壓力，對評價倍數屬中性",
+      "category": "macro",
+      "strength": "medium",
+      "evidence_ids": [
+        "S11"
+      ]
+    }
+  ],
+  "assumptions": [
+    "政策利率在研究期間不會大幅變動"
+  ],
+  "counter_evidence": [
+    {
+      "claim": "RSI 為 61，市場情緒已相對熱絡，環境因素可能已反映在價格",
+      "category": "technical",
+      "strength": "low",
+      "evidence_ids": [
+        "S4"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "description": "利率路徑改變將壓縮評價倍數",
+      "severity": "medium",
+      "evidence_ids": [
+        "S11"
+      ]
+    }
+  ],
+  "failure_conditions": [
+    {
+      "description": "政策利率高於 2.5% 時，中性判斷失效",
+      "metric": "policy_rate",
+      "comparator": ">",
+      "threshold": 2.5,
+      "evidence_ids": [
+        "S11"
+      ]
+    }
+  ],
+  "price_levels": [],
+  "data_gaps": [
+    "快照缺少匯率、外資資金流與景氣領先指標"
+  ]
+}

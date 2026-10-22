@@ -1,0 +1,89 @@
+{
+  "symbol": "9999",
+  "snapshot_id": "snap-synthetic-0001",
+  "phase": "initial",
+  "seen_roles": [],
+  "role": "technical",
+  "stance": "bullish",
+  "confidence": 0.55,
+  "confidence_rationale": "均線多頭排列且 RSI 未過熱，但缺少成交量確認",
+  "thesis": "收盤價位於 20 日與 60 日均線之上且 RSI 61，短線結構偏多，但上方有 60 日高點壓力。",
+  "arguments": [
+    {
+      "claim": "收盤價 100 高於 20 日均線 96 與 60 日均線 92，均線呈多頭排列",
+      "category": "technical",
+      "strength": "medium",
+      "evidence_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "claim": "RSI 為 61，動能健康且尚未進入過熱區",
+      "category": "technical",
+      "strength": "medium",
+      "evidence_ids": [
+        "S4"
+      ]
+    }
+  ],
+  "assumptions": [
+    "均線多頭排列在短期內延續"
+  ],
+  "counter_evidence": [
+    {
+      "claim": "收盤價距 60 日高點 108 僅約 8%，上方壓力可能限制短期空間",
+      "category": "technical",
+      "strength": "medium",
+      "evidence_ids": [
+        "S1",
+        "S10"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "description": "跌破 20 日低點支撐，結構將轉為弱勢",
+      "severity": "medium",
+      "evidence_ids": [
+        "S9"
+      ]
+    }
+  ],
+  "failure_conditions": [
+    {
+      "description": "收盤價跌破 20 日低點 94.0 時，多頭訊號失效",
+      "metric": "close_price",
+      "comparator": "<",
+      "threshold": 94.0,
+      "evidence_ids": [
+        "S9",
+        "S1"
+      ]
+    }
+  ],
+  "price_levels": [
+    {
+      "label": "20 日低點支撐",
+      "kind": "support",
+      "price": 94.0,
+      "calculation": "support = support_20d_low(S9) = 94.0",
+      "evidence_ids": [
+        "S9"
+      ]
+    },
+    {
+      "label": "60 日高點壓力",
+      "kind": "resistance",
+      "price": 108.0,
+      "calculation": "resistance = resistance_60d_high(S10) = 108.0",
+      "evidence_ids": [
+        "S10"
+      ]
+    }
+  ],
+  "data_gaps": [
+    "快照缺少成交量資料，無法確認突破的量能"
+  ]
+}

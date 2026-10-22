@@ -1,0 +1,152 @@
+{
+  "snapshot_id": "snap-synthetic-0001",
+  "symbol": "9999",
+  "market": "TW",
+  "created_at": "2026-10-22T02:00:00Z",
+  "is_synthetic": true,
+  "items": [
+    {
+      "id": "S1",
+      "field": "close_price",
+      "value": 100.0,
+      "unit": "TWD",
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S2",
+      "field": "ma20",
+      "value": 96.0,
+      "unit": "TWD",
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S3",
+      "field": "ma60",
+      "value": 92.0,
+      "unit": "TWD",
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S4",
+      "field": "rsi14",
+      "value": 61.0,
+      "unit": null,
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S5",
+      "field": "eps_ttm",
+      "value": 5.0,
+      "unit": "TWD",
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S6",
+      "field": "pe_ttm",
+      "value": 20.0,
+      "unit": "x",
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S7",
+      "field": "revenue_yoy",
+      "value": 12.0,
+      "unit": "%",
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S8",
+      "field": "gross_margin",
+      "value": 38.0,
+      "unit": "%",
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S9",
+      "field": "support_20d_low",
+      "value": 94.0,
+      "unit": "TWD",
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S10",
+      "field": "resistance_60d_high",
+      "value": 108.0,
+      "unit": "TWD",
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S11",
+      "field": "policy_rate",
+      "value": 2.0,
+      "unit": "%",
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S12",
+      "field": "pe_5y_median",
+      "value": 18.0,
+      "unit": "x",
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": "2026-10-21T00:00:00Z",
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "ok"
+    },
+    {
+      "id": "S13",
+      "field": "news_sentiment",
+      "value": null,
+      "unit": null,
+      "source": "fixture:synthetic",
+      "source_url": null,
+      "as_of": null,
+      "fetched_at": "2026-10-22T02:00:00Z",
+      "status": "error"
+    }
+  ]
+}

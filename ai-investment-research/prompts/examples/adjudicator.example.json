@@ -1,0 +1,81 @@
+{
+  "role": "adjudicator",
+  "symbol": "9999",
+  "snapshot_id": "snap-synthetic-0001",
+  "verdict": "watch",
+  "confidence": 0.5,
+  "confidence_rationale": "多空各有可驗證證據，但成長能否支撐評價溢價缺少財測與同業資料",
+  "summary": "多空證據互有強弱，核心分歧無法由快照決定，結論為觀望並列出重新評估的條件。",
+  "decision_rationale": "多方的 112 目標價依賴未驗證的 EPS 成長假設，不採計；空方的 90 目標價有公式與快照依據，但需成長放緩才成立。兩方都無法被快照決定，因此不給方向性結論。",
+  "inputs_reviewed": [
+    "macro",
+    "fundamental",
+    "technical",
+    "bull",
+    "bear"
+  ],
+  "disagreements": [
+    {
+      "topic": "評價溢價是否可持續",
+      "bull_position": "營收年增 12% 帶動 EPS 成長，評價可維持 20 倍並上修至 112",
+      "bear_position": "本益比高於五年中位數，成長放緩時評價回歸 18 倍，價格約 90",
+      "resolution": "快照只有 TTM EPS 與歷史中位數，沒有財測或同業資料，無法判定成長是否足以支撐溢價；列為未決。",
+      "resolved": false,
+      "evidence_ids": [
+        "S6",
+        "S12",
+        "S7"
+      ]
+    }
+  ],
+  "rejected_claims": [
+    {
+      "role": "bull",
+      "claim": "EPS 成長率與營收年增率同步，目標價 112",
+      "reason": "快照沒有 EPS 成長資料，屬未驗證假設，不採計為證據"
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "conservative",
+      "price": 90.0,
+      "calculation": "conservative = pe_5y_median(S12=18.0) × eps_ttm(S5=5.0) = 90.0",
+      "evidence_ids": [
+        "S12",
+        "S5"
+      ],
+      "probability": null
+    },
+    {
+      "label": "neutral",
+      "price": 100.0,
+      "calculation": "neutral = close_price(S1=100.0)，不假設評價或 EPS 變動",
+      "evidence_ids": [
+        "S1"
+      ],
+      "probability": null
+    },
+    {
+      "label": "optimistic",
+      "price": 108.0,
+      "calculation": "optimistic = resistance_60d_high(S10=108.0)，僅假設突破前高",
+      "evidence_ids": [
+        "S10"
+      ],
+      "probability": null
+    }
+  ],
+  "conditions_to_act": [],
+  "invalidation_conditions": [],
+  "watch_triggers": [
+    "收盤價站上 60 日高點 108.0 且營收年增率維持 10% 以上，重新評估偏多",
+    "收盤價跌破 20 日低點 94.0 且營收年增率低於 5%，重新評估偏空",
+    "快照補齊同業本益比與財測資料後，重新評估評價溢價是否合理"
+  ],
+  "data_gaps": [
+    "同業本益比",
+    "財測與法說資料",
+    "成交量",
+    "匯率與資金流"
+  ]
+}

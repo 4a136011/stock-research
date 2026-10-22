@@ -1,0 +1,101 @@
+{
+  "symbol": "9999",
+  "snapshot_id": "snap-synthetic-0001",
+  "phase": "initial",
+  "seen_roles": [],
+  "role": "bear",
+  "stance": "bearish",
+  "confidence": 0.5,
+  "confidence_rationale": "評價溢價有數據支持，但下行需要成長放緩這個未驗證的前提",
+  "thesis": "本益比高於五年中位數，若成長放緩使評價回歸 18 倍，價格約 90，下行約 10%。",
+  "arguments": [
+    {
+      "claim": "本益比 20 倍高於五年中位數 18 倍，評價已有溢價",
+      "category": "valuation",
+      "strength": "medium",
+      "evidence_ids": [
+        "S6",
+        "S12"
+      ]
+    },
+    {
+      "claim": "若評價回到五年中位數 18 倍，以 EPS 5.0 計算價格約 90",
+      "category": "scenario",
+      "strength": "medium",
+      "evidence_ids": [
+        "S12",
+        "S5"
+      ]
+    },
+    {
+      "claim": "收盤價逼近 60 日高點 108，上方壓力可能限制空間",
+      "category": "technical",
+      "strength": "low",
+      "evidence_ids": [
+        "S1",
+        "S10"
+      ]
+    }
+  ],
+  "assumptions": [
+    "成長放緩使評價回歸五年中位數",
+    "EPS 維持 TTM 水準 5.0 元"
+  ],
+  "counter_evidence": [
+    {
+      "claim": "營收年增 12% 與毛利率 38% 顯示基本面仍在擴張，空方評價論點需成長放緩才成立",
+      "category": "fundamental",
+      "strength": "high",
+      "evidence_ids": [
+        "S7",
+        "S8"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "description": "營收持續高成長使評價溢價被消化，空方論點落空",
+      "severity": "high",
+      "evidence_ids": [
+        "S7"
+      ]
+    }
+  ],
+  "failure_conditions": [
+    {
+      "description": "收盤價站上 60 日高點 108.0 時，空方論點失效",
+      "metric": "close_price",
+      "comparator": ">",
+      "threshold": 108.0,
+      "evidence_ids": [
+        "S10",
+        "S1"
+      ]
+    }
+  ],
+  "price_levels": [
+    {
+      "label": "評價回歸下行目標",
+      "kind": "target",
+      "price": 90.0,
+      "calculation": "downside_target = pe_5y_median(S12=18.0) × eps_ttm(S5=5.0) = 90.0；下行% = 90.0 ÷ close_price(S1=100.0) − 1 = −10.0%",
+      "evidence_ids": [
+        "S12",
+        "S5",
+        "S1"
+      ]
+    },
+    {
+      "label": "60 日均線支撐",
+      "kind": "support",
+      "price": 92.0,
+      "calculation": "support = ma60(S3) = 92.0",
+      "evidence_ids": [
+        "S3"
+      ]
+    }
+  ],
+  "data_gaps": [
+    "快照缺少同業評價與財測資料"
+  ]
+}

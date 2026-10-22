@@ -1,0 +1,104 @@
+{
+  "symbol": "9999",
+  "snapshot_id": "snap-synthetic-0001",
+  "phase": "initial",
+  "seen_roles": [],
+  "role": "bull",
+  "stance": "bullish",
+  "confidence": 0.5,
+  "confidence_rationale": "成長與技術結構支持，但上修依賴未驗證的 EPS 成長假設",
+  "thesis": "營收年增 12% 若帶動 EPS 同步成長，且評價維持，目標價可上看 112；技術面也站上雙均線。",
+  "arguments": [
+    {
+      "claim": "營收年增 12%、毛利率 38%，成長與獲利能力是多方核心證據",
+      "category": "fundamental",
+      "strength": "high",
+      "evidence_ids": [
+        "S7",
+        "S8"
+      ]
+    },
+    {
+      "claim": "收盤價站上 20 日與 60 日均線，技術結構支持上漲延續",
+      "category": "technical",
+      "strength": "medium",
+      "evidence_ids": [
+        "S1",
+        "S2",
+        "S3"
+      ]
+    },
+    {
+      "claim": "營收高成長持續並帶動 EPS 同步成長，是評價上修的主要催化劑",
+      "category": "catalyst",
+      "strength": "medium",
+      "evidence_ids": [
+        "S7",
+        "S5"
+      ]
+    }
+  ],
+  "assumptions": [
+    "EPS 成長率與營收年增率同步（快照未驗證）",
+    "本益比維持 20 倍不收斂"
+  ],
+  "counter_evidence": [
+    {
+      "claim": "本益比 20 倍高於五年中位數 18 倍，上漲依賴評價維持",
+      "category": "valuation",
+      "strength": "high",
+      "evidence_ids": [
+        "S6",
+        "S12"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "description": "成長放緩導致評價倍數向中位數收斂",
+      "severity": "high",
+      "evidence_ids": [
+        "S6",
+        "S12"
+      ]
+    }
+  ],
+  "failure_conditions": [
+    {
+      "description": "營收年增率低於 5% 時，上修論點失效",
+      "metric": "revenue_yoy",
+      "comparator": "<",
+      "threshold": 5.0,
+      "evidence_ids": [
+        "S7"
+      ]
+    }
+  ],
+  "price_levels": [
+    {
+      "label": "突破 60 日高點目標",
+      "kind": "target",
+      "price": 108.0,
+      "calculation": "target = resistance_60d_high(S10=108.0)；潛在報酬% = 108.0 ÷ close_price(S1=100.0) − 1 = 8.0%",
+      "evidence_ids": [
+        "S10",
+        "S1"
+      ]
+    },
+    {
+      "label": "成長與評價維持目標",
+      "kind": "target",
+      "price": 112.0,
+      "calculation": "target = pe_ttm(S6=20.0) × eps_ttm(S5=5.0) × (1 + revenue_yoy(S7=12.0)/100) = 112.0；潛在報酬% = 112.0 ÷ 100.0 − 1 = 12.0%（假設 EPS 與營收同步成長）",
+      "evidence_ids": [
+        "S6",
+        "S5",
+        "S7",
+        "S1"
+      ]
+    }
+  ],
+  "data_gaps": [
+    "快照缺少法說會財測與訂單資料，催化劑時點無法確認"
+  ]
+}
